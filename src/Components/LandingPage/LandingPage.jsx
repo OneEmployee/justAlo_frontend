@@ -79,8 +79,8 @@ const LandingPage = () => {
     let value = e.target.value;
     setDeparture(value);
 
+    let allSources = [];
     if (routes) {
-      let allSources = [];
       routes.forEach((route) => {
         allSources.push(route.departureLocation.name);
         allSources = [
@@ -89,35 +89,36 @@ const LandingPage = () => {
           ...route.departureLocation.subLocations,
         ];
       });
+    }
 
-      // Maharashtra Cities Fallback
-      const maharashtraCities = [
-        "Nagpur", "Amravati", "Gondia", "Gadchiroli", "Akola", "Bhandara", 
-        "Tumsar", "Katol", "Wardha", "Hinganghat", "Murtizapur", "Badnera",
-        "Pune", "Mumbai", "Nashik", "Aurangabad", "Solapur", "Kolhapur", 
-        "Satara", "Sangli", "Chandrapur", "Yavatmal", "Buldhana", "Latur", "Nanded"
-      ];
-      allSources = [...allSources, ...maharashtraCities];
+    // Maharashtra Cities Fallback
+    const maharashtraCities = [
+      "Nagpur", "Amravati", "Gondia", "Gadchiroli", "Akola", "Bhandara", 
+      "Tumsar", "Katol", "Wardha", "Hinganghat", "Murtizapur", "Badnera",
+      "Pune", "Mumbai", "Nashik", "Aurangabad", "Solapur", "Kolhapur", 
+      "Satara", "Sangli", "Chandrapur", "Yavatmal", "Buldhana", "Latur", "Nanded"
+    ];
+    allSources = [...allSources, ...maharashtraCities];
 
-      allSources = Array.from(new Set(allSources));
-      let filteredSources = allSources.filter((source) =>
-        source.toLowerCase().includes(value.toLowerCase())
-      );
-      // console.log("Can search: ", routes.length, filteredSources);
-      if (filteredSources.length > 0 && value) {
-        console.log("hey true");
-        setFilteredSources(filteredSources);
-        setDisplayDepartureDropdown(true);
-      } else {
-        setDisplayDepartureDropdown(false);
-      }
+    allSources = Array.from(new Set(allSources));
+    let filteredSources = allSources.filter((source) =>
+      source.toLowerCase().includes(value.toLowerCase())
+    );
+
+    if (filteredSources.length > 0 && value) {
+      setFilteredSources(filteredSources);
+      setDisplayDepartureDropdown(true);
+    } else {
+      setDisplayDepartureDropdown(false);
     }
   };
+
   const onArrivalChange = (e) => {
     let value = e.target.value;
     setArrival(value);
+
+    let allDestinations = [];
     if (routes) {
-      let allDestinations = [];
       routes.forEach((route) => {
         allDestinations.push(route.arrivalLocation.name);
         allDestinations = [
@@ -126,27 +127,27 @@ const LandingPage = () => {
           ...route.arrivalLocation.subLocations,
         ];
       });
+    }
 
-      // Maharashtra Cities Fallback
-      const maharashtraDestinations = [
-        "Nagpur", "Amravati", "Gondia", "Gadchiroli", "Akola", "Bhandara", 
-        "Tumsar", "Katol", "Wardha", "Hinganghat", "Murtizapur", "Badnera",
-        "Pune", "Mumbai", "Nashik", "Aurangabad", "Solapur", "Kolhapur", 
-        "Satara", "Sangli", "Chandrapur", "Yavatmal", "Buldhana", "Latur", "Nanded"
-      ];
-      allDestinations = [...allDestinations, ...maharashtraDestinations];
+    // Maharashtra Cities Fallback
+    const maharashtraDestinations = [
+      "Nagpur", "Amravati", "Gondia", "Gadchiroli", "Akola", "Bhandara", 
+      "Tumsar", "Katol", "Wardha", "Hinganghat", "Murtizapur", "Badnera",
+      "Pune", "Mumbai", "Nashik", "Aurangabad", "Solapur", "Kolhapur", 
+      "Satara", "Sangli", "Chandrapur", "Yavatmal", "Buldhana", "Latur", "Nanded"
+    ];
+    allDestinations = [...allDestinations, ...maharashtraDestinations];
 
-      allDestinations = Array.from(new Set(allDestinations));
-      let filteredDestinations = allDestinations.filter((source) =>
-        source.toLowerCase().includes(value.toLowerCase())
-      );
+    allDestinations = Array.from(new Set(allDestinations));
+    let filteredDestinations = allDestinations.filter((source) =>
+      source.toLowerCase().includes(value.toLowerCase())
+    );
 
-      if (filteredDestinations.length > 0 && value) {
-        setFilteredDestinations(filteredDestinations);
-        setDisplayArrivalDropdown(true);
-      } else {
-        setDisplayArrivalDropdown(false);
-      }
+    if (filteredDestinations.length > 0 && value) {
+      setFilteredDestinations(filteredDestinations);
+      setDisplayArrivalDropdown(true);
+    } else {
+      setDisplayArrivalDropdown(false);
     }
   };
 

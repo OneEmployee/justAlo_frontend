@@ -43,7 +43,7 @@ const BusHireFooter = () => {
                 </div>
                 <div className={Styles.busHireFooterimageSection}>
                     <div><img src="/logo.jpeg" alt="" height="50px" /></div>
-                    <div className={Styles.copyRightText}>Ⓒ 2020 ibibogroup All rights reserved</div>
+                    <div className={Styles.copyRightText}>Ⓒ 2026 JustAlo Group All rights reserved</div>
 
                 </div>
             </div>
