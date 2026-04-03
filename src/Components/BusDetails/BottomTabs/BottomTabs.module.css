@@ -4,6 +4,7 @@
   justify-content: space-between;
   align-items: center;
   margin-top: 10px;
+  gap: 15px;
 }
 
 .mainBar > div {
@@ -12,6 +13,7 @@
   font-size: 13px;
   font-weight: 600;
   transition: 0.2s;
+  white-space: nowrap;
 }
 
 .mainBar > div:hover {
@@ -39,10 +41,83 @@
 
 .displayArea {
   width: 100%;
-  padding: 20px;
+  padding: 12px;
   background: #fdfdfd;
   border: 1px solid #eee;
   border-radius: 8px;
-  margin-top: 15px;
-  min-height: 100px;
+  margin-top: 10px;
+  min-height: 80px;
 }
+
+@media (max-width: 768px) {
+  .mainBar {
+    flex-wrap: wrap;
+    gap: 8px;
+    justify-content: flex-start;
+  }
+  
+  /* Hide the | separators on mobile using nth-child */
+  .mainBar > div:nth-child(even) {
+    display: none;
+  }
+
+  .mainBar > div {
+    font-size: 10px;
+    padding: 6px 8px;
+    background: #f0fafa;
+    border-radius: 6px;
+    border: 1px solid #d0f0f0;
+    flex-shrink: 0;
+    text-align: center;
+    width: calc(50% - 4px); /* 2 items per row */
+    white-space: normal; /* Allow text to wrap inside the small button */
+    word-break: break-word;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 42px;
+  }
+
+  .mainBar > div:last-child {
+    flex-basis: 100%;
+    width: 100%;
+    margin-top: 8px;
+    padding: 10px;
+    border-radius: 8px;
+    background-color: #00CED1;
+    color: white;
+    font-size: 14px;
+    min-height: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .mainBar {
+    gap: 4px;
+  }
+  .mainBar > div {
+    font-size: 10px;
+    padding: 6px 8px;
+    background: #f0fafa;
+    border-radius: 6px;
+    border: 1px solid #d0f0f0;
+    flex-shrink: 0;
+    text-align: center;
+    width: calc(50% - 4px); /* 2 items per row */
+    white-space: normal; /* Allow text to wrap inside the small button */
+    word-break: break-word; /* Force break long names */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 42px;
+    box-sizing: border-box;
+  }
+  .mainBar > div:last-child {
+    font-size: 13px;
+    padding: 8px;
+  }
+}
+
+
+
+

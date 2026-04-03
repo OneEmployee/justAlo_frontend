@@ -8,11 +8,7 @@ const TripTypeContainer = ({ handleClick }) => {
   );
 
   const checkLogin = () => {
-    if (customerName === null) {
-      alert("Please Login, To Book Seats");
-    } else {
-      handleClick();
-    }
+    handleClick();
   };
 
   const handleLocalAndAirport = () => {

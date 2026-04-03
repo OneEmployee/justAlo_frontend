@@ -8,13 +8,38 @@
   padding: 0 100px;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   position: fixed;
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
   z-index: 1000;
+  transition: padding 0.3s ease;
 }
+
+@media (max-width: 1024px) {
+  .navbar {
+    padding: 0 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    padding: 0 15px;
+    height: auto;
+    min-height: 60px;
+    flex-wrap: wrap;
+  }
+  .left {
+    display: none; /* Hide help/manage booking on small mobile to save space */
+  }
+  .navLink {
+    display: none; /* In a real app we'd use a hamburger, but for now we'll prioritize space */
+  }
+}
+
 .right,
 .navLink {
   display: flex;
+  align-items: center;
 }
 .white {
   color: #00CED1;
@@ -27,7 +52,7 @@
   text-decoration: none;
 }
 .left {
-  width: 20%;
+  width: auto;
   display: flex;
-  justify-content: space-around;
+  gap: 20px;
 }

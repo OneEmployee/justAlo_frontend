@@ -1,36 +1,71 @@
 .Left {
   padding: 20px;
+  background: white;
+}
+
+.Left p {
+  font-weight: 700;
+  color: #004F50;
+  font-size: 14px;
+  margin-bottom: 15px;
+  border-bottom: 2px solid #E0FFFF;
+  padding-bottom: 5px;
 }
 
 .Left ul {
   list-style: none;
+  padding: 0;
 }
+
 .Left_filters {
-  margin-bottom: 25px;
+  margin-bottom: 30px;
 }
+
 .Left ul li {
-  border-bottom: 1px solid #ddd;
-  padding: 15px 0px;
+  border-bottom: 1px solid #f9f9f9;
+  padding: 12px 0px;
   cursor: pointer;
+  transition: background 0.2s;
+  display: flex;
+  align-items: center;
 }
+
+.Left ul li:hover {
+  background-color: #fcfcfc;
+}
+
 .Left li i {
-  margin: 0 10px;
+  margin-right: 15px;
+  color: #008B8B;
 }
-.Left ul li * {
-  display: inline-block;
-}
+
 .Left_filters__search {
-  border: 1px solid #ddd;
-  padding: 5px;
+  display: flex;
+  align-items: center;
+  border: 1px solid #eee;
+  padding: 8px 12px;
   margin-top: 10px;
   margin-bottom: 20px;
+  border-radius: 8px;
 }
+
 .Left_filters__search i {
-  color: rgb(126, 123, 123);
-  cursor: pointer;
+  color: #999;
 }
+
 .Left_filters__search input {
   border: none;
   outline: none;
-  margin-left: 5px;
+  margin-left: 10px;
+  width: 100%;
 }
+
+@media (max-width: 768px) {
+  .Left {
+    padding: 15px;
+  }
+  .Left p {
+    font-size: 13px;
+  }
+}
+

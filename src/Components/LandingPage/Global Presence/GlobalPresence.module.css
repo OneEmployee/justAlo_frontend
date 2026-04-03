@@ -7,16 +7,59 @@
 
 .globalPresenceContainer {
   max-width: 1200px;
+  width: 90%;
   margin: 0 auto;
   padding: 20px;
 }
+
+.countryContainerWrapper {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 60px;
+  margin-bottom: 80px;
+}
+
+@media (max-width: 768px) {
+  .globalPresenceHeading {
+    font-size: 24px !important;
+    margin-bottom: 30px !important;
+  }
+  .countryContainer,
+  .countryContainerWrapper {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 20px !important;
+    width: 95%;
+    margin: 20px auto !important;
+  }
+  .statFlex {
+    flex-direction: column !important;
+    gap: 20px;
+    margin-top: 30px;
+  }
+  .numbers {
+    font-size: 32px;
+  }
+  .countryItem img {
+    height: 40px;
+  }
+}
+
+@media (max-width: 480px) {
+  .countryContainer,
+  .countryContainerWrapper {
+    grid-template-columns: repeat(2, 1fr) !important; /* Keep 2 columns for icons to save space */
+    gap: 15px !important;
+  }
+}
+
 
 .globalPresenceHeading {
   font-weight: 800;
   text-align: center;
   font-size: 32px;
   margin-bottom: 60px;
-  color: #000; /* As requested: Black text */
+  color: #000;
   text-transform: uppercase;
 }
 
@@ -34,10 +77,11 @@
 }
 
 .countryItem img {
-  height: 80px;
-  filter: grayscale(100%) brightness(50%); /* Match black theme */
+  height: 60px; /* Reduced for better fit */
+  /* filter removed as requested */
   transition: 0.3s;
 }
+
 
 .countryItem:hover img {
   filter: none;
@@ -74,4 +118,10 @@
   flex-direction: column;
   align-items: center;
   flex: 1;
+}
+
+.statFlex {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 60px;
 }

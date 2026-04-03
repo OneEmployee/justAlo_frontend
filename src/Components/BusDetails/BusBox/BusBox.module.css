@@ -10,7 +10,7 @@
   font-size: 14px;
   background-color: #fff;
   border-radius: 12px;
-  padding: 20px;
+  padding: 15px;
   position: relative;
   transition: 0.3s;
 }
@@ -37,7 +37,7 @@
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
 }
 
 .busBoxSection11 {
@@ -127,7 +127,7 @@
 
 .busBoxSection2 {
   display: flex;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
 }
 
 .typeBadges {
@@ -146,5 +146,107 @@
 
 .busBoxSection3 {
   border-top: 1px dashed #eee;
-  padding-top: 15px;
+  padding-top: 12px;
 }
+@media (max-width: 768px) {
+  .busBox {
+    padding: 8px;
+    margin-top: 10px;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box; /* Inclusion of padding in width calculation */
+  }
+  .busBoxSection1 {
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 8px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  .busBoxSection11 {
+    width: 100% !important;
+  }
+  .ratingSection {
+    width: 100% !important;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: -4px;
+  }
+  .timesSection {
+    width: 100% !important;
+    text-align: left !important;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #fdfdfd;
+    padding: 6px;
+    border-radius: 6px;
+    box-sizing: border-box;
+  }
+  .priceSection {
+    width: 100% !important;
+    text-align: right !important;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    border-top: 1px solid #f0f0f0;
+    padding-top: 8px;
+    margin-top: 4px;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+  }
+  .oldPrice {
+    font-size: 10px;
+    margin-right: -8px;
+  }
+  .currentPrice {
+    font-size: 16px;
+    flex: 1;
+    text-align: right;
+  }
+  .onwardsText {
+    flex-basis: 100%;
+    margin-top: -6px;
+    font-size: 9px;
+  }
+  .reviewsCount {
+    margin-top: 0;
+    font-size: 11px;
+  }
+  .promoBadge {
+    position: static;
+    margin-bottom: 8px;
+    width: fit-content;
+    font-size: 10px;
+    padding: 4px 8px;
+  }
+  .typeBadges {
+    flex-wrap: wrap;
+    gap: 6px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+}
+
+@media (max-width: 480px) {
+  .operatorTitle {
+    font-size: 14px;
+  }
+  .timeBold {
+    font-size: 13px;
+  }
+  .currentPrice {
+    font-size: 15px;
+  }
+  .busBox {
+    padding: 6px;
+  }
+  .busDetailsText {
+    font-size: 10px;
+  }
+}
+
+
+

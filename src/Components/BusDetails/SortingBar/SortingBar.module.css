@@ -107,3 +107,26 @@
   align-items: center;
   cursor: pointer;
 }
+@media (max-width: 768px) {
+  .mainContainer {
+    overflow-x: auto;
+    white-space: nowrap;
+    justify-content: flex-start;
+    gap: 15px;
+    padding-bottom: 5px;
+    height: auto;
+    background: #f9f9f9;
+    padding: 10px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+  }
+  .mainContainer1, .mainContainer2, .mainContainer3, .mainContainer4, .mainContainer5, .mainContainer6, .mainContainer7 {
+    width: auto !important;
+    flex-shrink: 0;
+    font-size: 11px;
+  }
+  .mainContainer1 {
+    gap: 8px;
+    font-size: 12px;
+  }
+}

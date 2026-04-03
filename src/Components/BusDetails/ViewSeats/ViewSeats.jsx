@@ -20,7 +20,8 @@ const ViewSeats = ({
   busDepartureTime,
 }) => {
   const [selectedSeats, setSelectedSeats] = React.useState([]);
-  const alreadyBookedSeats = filledSeats;
+  const [confirmedBookings, setConfirmedBookings] = React.useState([]);
+  const alreadyBookedSeats = [...filledSeats, ...confirmedBookings];
 
   const [boardAndDrop, setBoardAndDrop] = React.useState(false);
 
@@ -38,12 +39,12 @@ const ViewSeats = ({
 
     const payload2 = {
       key: "fare",
-      value: selectedSeats.length * seatPrice,
+      value: (selectedSeats.length + confirmedBookings.length) * seatPrice,
     };
 
     dispatch(updateBookingDetails(payload1));
     dispatch(updateBookingDetails(payload2));
-  }, [selectedSeats, seatPrice, dispatch]);
+  }, [selectedSeats, confirmedBookings, seatPrice, dispatch]);
 
   React.useEffect(() => {
     let busIdPayload = {
@@ -52,6 +53,10 @@ const ViewSeats = ({
     };
     dispatch(updateBookingDetails(busIdPayload));
   }, [busId, dispatch]);
+
+  const confirmBooking = (seatNo) => {
+    setConfirmedBookings([...confirmedBookings, seatNo]);
+  };
 
   const handleSelectedSeats = (seatNo) => {
     if (selectedSeats.includes(seatNo)) {
@@ -78,6 +83,7 @@ const ViewSeats = ({
                   alreadyBookedSeats={alreadyBookedSeats}
                   handleSelectedSeats={handleSelectedSeats}
                   selectedSeats={selectedSeats}
+                  confirmBooking={confirmBooking}
                 />
               );
             })}
@@ -91,6 +97,7 @@ const ViewSeats = ({
                   alreadyBookedSeats={alreadyBookedSeats}
                   handleSelectedSeats={handleSelectedSeats}
                   selectedSeats={selectedSeats}
+                  confirmBooking={confirmBooking}
                 />
               );
             })}
@@ -105,6 +112,7 @@ const ViewSeats = ({
                   alreadyBookedSeats={alreadyBookedSeats}
                   handleSelectedSeats={handleSelectedSeats}
                   selectedSeats={selectedSeats}
+                  confirmBooking={confirmBooking}
                 />
               );
             })}
@@ -118,6 +126,7 @@ const ViewSeats = ({
                   alreadyBookedSeats={alreadyBookedSeats}
                   handleSelectedSeats={handleSelectedSeats}
                   selectedSeats={selectedSeats}
+                  confirmBooking={confirmBooking}
                 />
               );
             })}

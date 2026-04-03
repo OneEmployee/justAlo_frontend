@@ -4,6 +4,24 @@ import styles from "./Coupon.module.css";
 const Coupon = () => {
   return (
     <div className={styles.couponContainer}>
+      {/* Floating Container moved above flex for natural order on mobile */}
+      <div className={styles.float}>
+        <div className={styles.imgBox}>
+          <img
+            src="https://s3.rdbuz.com/Images/webplatform/measures/safetyplus.svg"
+            alt="shield"
+          />
+        </div>
+        <div className={styles.writingBox}>
+          <h4>Introducing Safety+ Program</h4>
+          <p>A unique certification program that ensures safety in all buses</p>
+        </div>
+        <div className={styles.buttonBox}>
+          <div style={{ height: "50px" }}></div>
+          <button>know More</button>
+        </div>
+      </div>
+
       <div className={styles.flex}>
         <div className={styles.coupon}>
           <span>save upto rs 150</span>
@@ -36,24 +54,8 @@ const Coupon = () => {
           <span>Use code FIRST</span>
         </div>
       </div>
-      {/* Floating Container */}
-      <div className={styles.float}>
-        <div className={styles.imgBox}>
-          <img
-            src="https://s3.rdbuz.com/Images/webplatform/measures/safetyplus.svg"
-            alt="shield"
-          />
-        </div>
-        <div className={styles.writingBox}>
-          <h4>Introducing Safety+ Program</h4>
-          <p>A unique certification program that ensures safety in all buses</p>
-        </div>
-        <div className={styles.buttonBox}>
-          <div style={{ height: "50px" }}></div>
-          <button>know More</button>
-        </div>
-      </div>
     </div>
+
   );
 };
 

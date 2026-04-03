@@ -10,7 +10,7 @@ const SubFooter = () => {
                     <h4>Bus Hire Cities</h4>
                     <p>Bus Hire in Ahmedabad</p>
                     <p>Bus Hire in Mumbai</p>
-                    <p>Bus Hire in Bnaglore</p>
+                    <p>Bus Hire in Bangalore</p>
                     <p>Bus Hire in Chennai</p>
                 </div>
                 <div className={Styles.subFootercontainer_alternateSection}>
@@ -31,7 +31,7 @@ const SubFooter = () => {
                     <p>Tempo travellers in Delhi</p>
                     <p>Tempo travellers in Pune</p>
                     <p>Tempo travellers in Mumbai</p>
-                    <p>Tempo travellers in Hydearabd</p>
+                    <p>Tempo travellers in Hyderabad</p>
                     <p>Tempo travellers in Chennai</p>
                 </div>
             </div>

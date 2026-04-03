@@ -19,7 +19,7 @@ const data = [
       "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fimages.vexels.com%2Fmedia%2Fusers%2F3%2F127141%2Fisolated%2Fpreview%2Fc5a45f450c5a779db2fb3f6dc8bb617a-best-price-sale-tag-by-vexels.png&f=1&nofb=1",
     title: "LOWEST PRICES",
     desc:
-      "We always give you the lowest price with the best partner offers. And be Poceket friendly for your upcoming trips",
+      "We always give you the lowest price with the best partner offers. And be pocket friendly for your upcoming trips",
   },
   {
     img:

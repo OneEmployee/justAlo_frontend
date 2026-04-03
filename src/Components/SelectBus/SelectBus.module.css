@@ -1,5 +1,92 @@
 .SelectBus_mainContent {
-  /* border: 1px solid blue; */
   display: grid;
-  grid-template-columns: 20% 80%;
+  grid-template-columns: 250px 1fr;
+  width: 95%;
+  max-width: 1300px;
+  margin: 20px auto;
+  gap: 20px;
+  position: relative;
 }
+
+.mobile_filter_toggle {
+  display: none;
+  background-color: #004F50;
+  color: white;
+  padding: 10px;
+  text-align: center;
+  font-weight: 700;
+  cursor: pointer;
+  margin: 10px;
+  border-radius: 8px;
+}
+
+.close_filters {
+  display: none;
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 24px;
+  cursor: pointer;
+  z-index: 1002;
+  color: #004F50;
+}
+
+@media (max-width: 1024px) {
+  .SelectBus_mainContent {
+    grid-template-columns: 200px 1fr;
+    gap: 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  .SelectBus_mainContent {
+    display: block;
+    width: 100%;
+    margin: 10px 0;
+    padding: 0 12px;
+    box-sizing: border-box; /* Crucial: ensures padding is included in 100% */
+  }
+
+  .mobile_filter_toggle {
+    display: block;
+    margin: 10px 12px;
+  }
+
+  .Left_wrapper {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 280px;
+    height: 100vh;
+    background: white;
+    z-index: 2000;
+    transition: 0.3s ease-in-out;
+    box-shadow: 2px 0 10px rgba(0,0,0,0.1);
+    overflow-y: auto;
+    padding-top: 50px;
+  }
+
+  .Left_wrapper.show {
+    left: 0;
+  }
+
+  .showFilters::after {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.4);
+    z-index: 1999;
+  }
+
+  .close_filters {
+    display: block;
+    top: 15px;
+    right: 15px;
+    z-index: 2001;
+  }
+}
+
+

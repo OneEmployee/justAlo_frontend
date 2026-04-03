@@ -9,6 +9,7 @@ const SmallSeat = ({
   alreadyBookedSeats,
   handleSelectedSeats,
   selectedSeats,
+  confirmBooking,
 }) => {
   var color;
 
@@ -27,11 +28,11 @@ const SmallSeat = ({
   );
 
   const handleSeatBooking = () => {
-    console.log(customerName);
-    if (customerName === null) {
-      alert("Please Login, To Book Seats");
-    } else if (!alreadyBookedSeats.includes(seatNo)) {
-      handleSelectedSeats(seatNo);
+    if (!alreadyBookedSeats.includes(seatNo)) {
+      if (window.confirm(`Do you want to book seat no: ${seatNo}?`)) {
+        confirmBooking(seatNo);
+        alert(`Seat ${seatNo} has been booked!`);
+      }
     }
   };
 

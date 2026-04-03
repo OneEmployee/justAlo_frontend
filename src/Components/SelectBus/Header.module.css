@@ -142,3 +142,122 @@
   width: 150px;
   text-align: right;
 }
+@media (max-width: 1024px) {
+  .HeaderOne {
+    padding: 8px 20px;
+  }
+  .StickyHeader {
+    padding: 10px 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .QuickSearchContainer {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+  
+  .SearchInputGroup {
+    width: 100%;
+    overflow-x: auto;
+    padding: 10px;
+    border-radius: 8px;
+  }
+
+  .RouteInfo {
+    margin-right: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .RouteTitleRight {
+    display: none;
+  }
+
+  .DateGroup {
+    border-left: none;
+    padding-left: 0;
+    margin-top: 10px;
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .SearchCircle {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 35px;
+    height: 35px;
+  }
+
+  .InputBox {
+    min-width: 40%;
+    margin-bottom: 5px;
+  }
+
+  .SwapIcon {
+    padding: 0;
+    margin: 0 5px;
+  }
+
+  .DateGroup {
+    border-top: 1px solid #f0f0f0;
+    padding-top: 10px;
+    margin-top: 5px;
+  }
+}
+
+@media (max-width: 480px) {
+  .StickyHeader {
+    padding: 10px 10px 15px;
+  }
+  
+  .SearchCircle {
+    position: static;
+    transform: none;
+    width: 100%;
+    height: 35px;
+    border-radius: 6px;
+    margin: 10px 0 0;
+  }
+
+  .SearchInputGroup {
+    gap: 5px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .InputBox {
+    width: 100%;
+    min-width: 100%;
+    border-bottom: 1px solid #f9f9f9;
+    padding-bottom: 5px;
+  }
+  
+  .SwapIcon {
+    position: absolute;
+    right: 25px;
+    top: 35px;
+    background: white;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .RouteTitle {
+    font-size: 14px;
+  }
+  .InputValue {
+    font-size: 12px;
+  }
+  .QuickDates {
+    display: none; /* Too many buttons for small mobile header */
+  }
+}

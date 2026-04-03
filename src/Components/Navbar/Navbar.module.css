@@ -8,14 +8,18 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0px 5%;
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding: 10px 5%;
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
+
 .Navbar li {
   cursor: pointer;
+  list-style: none; /* Add this to ensure no markers */
 }
+
 .Navbar li:hover {
   text-decoration: underline;
   font-weight: bold;
@@ -26,51 +30,90 @@ body {
   text-decoration: none;
   color: #00CED1;
 }
-.Navbar > * {
-  /* display: inline-block; */
-}
 
 .Navbar__listOne {
   list-style: none;
-
-  /* margin: 0 20px; */
+  display: flex;
+  padding: 0;
+  margin: 0;
 }
+
 .Navbar__listOne li {
   font-weight: bolder;
+  margin-right: 20px;
 }
+
 .Navbar__listTwo {
   list-style: none;
-  margin: 0 20px;
+  margin: 0;
+  padding: 0;
 }
 
 .Navbar__listOne > li,
 .Navbar__listTwo > li {
   display: inline-block;
-  margin: 0 10px;
   color: #00CED1;
 }
+
 .icons {
   font-size: 25px;
 }
+
 .rightSide_header {
-  display: inline-block;
-  margin: 0 10px;
-  color: #00CED1;
   display: flex;
-  width: 350px;
-  justify-content: space-evenly;
+  justify-content: flex-end;
   align-items: center;
+  color: #00CED1;
+  gap: 15px;
 }
+
 .leftSide_header {
-  display: inline-block;
-  margin: 0 10px;
-  color: #00CED1;
   display: flex;
-  width: 400px;
-  justify-content: space-evenly;
   align-items: center;
+  color: #00CED1;
+  gap: 20px;
 }
+
 .leftSide_header img {
   cursor: pointer;
-  height: 40px;
+  height: 35px;
 }
+
+@media (max-width: 768px) {
+  .Navbar {
+    padding: 10px 3%;
+  }
+
+  .Navbar__listOne {
+    display: none; /* Hide main links on mobile, or we could add a burger */
+  }
+
+  .rightSide_header {
+    width: auto;
+    gap: 10px;
+  }
+
+  .leftSide_header {
+    width: auto;
+  }
+
+  /* Show only essential items on mobile */
+  .Navbar__listTwo li:not(:last-child):not(:nth-last-child(2)) {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .leftSide_header img {
+    height: 28px;
+  }
+  
+  .rightSide_header {
+    gap: 5px;
+  }
+
+  .icons {
+    font-size: 22px;
+  }
+}
+
