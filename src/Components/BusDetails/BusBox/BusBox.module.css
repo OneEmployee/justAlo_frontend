@@ -1,0 +1,150 @@
+* {
+  box-sizing: border-box;
+}
+.busBox {
+  width: 100%;
+  border: 1px solid #ddd;
+  margin-top: 20px;
+  color: #00A5A8;
+  font-family: Montserrat, sans-serif;
+  font-size: 14px;
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 20px;
+  position: relative;
+  transition: 0.3s;
+}
+
+.busBox:hover {
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+.promoBadge {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: #FFF3CD;
+  color: #856404;
+  padding: 4px 12px;
+  font-size: 11px;
+  border-radius: 4px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+}
+
+.busBoxSection1 {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 20px;
+}
+
+.busBoxSection11 {
+  width: 30%;
+}
+
+.operatorTitle {
+  color: #222;
+  font-weight: 800;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+}
+
+.busIconBadge {
+  margin-left: 8px;
+  color: #777;
+  font-size: 18px;
+}
+
+.busDetailsText {
+  color: #777;
+  font-size: 13px;
+  margin-top: 4px;
+}
+
+.ratingSection {
+  width: 15%;
+}
+
+.ratingBox {
+  background: #008B8B;
+  color: white;
+  width: fit-content;
+  padding: 4px 10px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  font-weight: 700;
+  gap: 4px;
+}
+
+.reviewsCount {
+  color: #999;
+  font-size: 12px;
+  margin-top: 6px;
+}
+
+.timesSection {
+  width: 25%;
+  text-align: center;
+}
+
+.timeBold {
+  font-size: 18px;
+  font-weight: 700;
+  color: #222;
+}
+
+.durationMuted {
+  color: #777;
+  font-size: 12px;
+  margin-top: 4px;
+}
+
+.priceSection {
+  width: 15%;
+  text-align: right;
+}
+
+.oldPrice {
+  color: #999;
+  text-decoration: line-through;
+  font-size: 13px;
+}
+
+.currentPrice {
+  color: #222;
+  font-size: 20px;
+  font-weight: 800;
+}
+
+.onwardsText {
+  color: #777;
+  font-size: 11px;
+}
+
+.busBoxSection2 {
+  display: flex;
+  margin-bottom: 15px;
+}
+
+.typeBadges {
+  display: flex;
+  gap: 10px;
+}
+
+.newBusBadge, .businessClassBadge {
+  background: #E0FFFF;
+  color: #008B8B;
+  font-size: 11px;
+  padding: 4px 10px;
+  border-radius: 4px;
+  font-weight: 600;
+}
+
+.busBoxSection3 {
+  border-top: 1px dashed #eee;
+  padding-top: 15px;
+}

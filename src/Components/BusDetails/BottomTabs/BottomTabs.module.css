@@ -1,0 +1,48 @@
+.mainBar {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.mainBar > div {
+  cursor: pointer;
+  color: #008B8B;
+  font-size: 13px;
+  font-weight: 600;
+  transition: 0.2s;
+}
+
+.mainBar > div:hover {
+  color: #00CED1;
+}
+
+.mainBar > div:last-child {
+  background-color: #00CED1;
+  color: white;
+  padding: 10px 24px;
+  border-radius: 25px;
+  text-transform: capitalize;
+  font-size: 15px;
+  font-weight: 700;
+  box-shadow: 0 4px 12px rgba(0, 206, 209, 0.3);
+  transition: 0.3s;
+  border: none;
+}
+
+.mainBar > div:last-child:hover {
+  background-color: #00BABA;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0, 206, 209, 0.4);
+}
+
+.displayArea {
+  width: 100%;
+  padding: 20px;
+  background: #fdfdfd;
+  border: 1px solid #eee;
+  border-radius: 8px;
+  margin-top: 15px;
+  min-height: 100px;
+}
