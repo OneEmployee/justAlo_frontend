@@ -5,7 +5,7 @@ import { FaWallet } from "react-icons/fa";
 import { AiOutlineSetting } from "react-icons/ai";
 import { BiPin } from "react-icons/bi";
 import MyTrips from "./MyTrips";
-import HiredBuses from "./HiredBuses";
+import HiJustAloes from "./HiJustAloes";
 import { useSelector } from "react-redux";
 const Profile = () => {
   const [selectedItem, setSelectedItem] = React.useState("trips");
@@ -48,7 +48,7 @@ const Profile = () => {
           <div className={Styles.line}></div>
           <li
             className={Styles.leftPannel_eachListOption}
-            onClick={() => handleListItemClick("hiredBuses")}
+            onClick={() => handleListItemClick("hiJustAloes")}
           >
             <BiPin style={{ color:  "#00A5A8", fontSize: "30px" }} />
             <div className={Styles.leftPannel_eachListItem_text}>Hired Bus</div>
@@ -82,7 +82,7 @@ const Profile = () => {
         </ul>
       </div>
       <div className={Styles.seprator}></div>
-      {selectedItem === "hiredBuses" ? <HiredBuses /> : null}
+      {selectedItem === "hiJustAloes" ? <HiJustAloes /> : null}
       {selectedItem === "trips" ? <MyTrips /> : null}
       {selectedItem === "wallet" ? "Wallet feature coming soon..." : null}
       {selectedItem === "profile" ? (

@@ -1,8 +1,8 @@
 import React from "react";
-import styles from "./SingleHiredBus.module.css";
+import styles from "./SingleHiJustAlo.module.css";
 import { BsCircleFill } from "react-icons/bs";
 
-const SingleHiredBus = ({ booking }) => {
+const SingleHiJustAlo = ({ booking }) => {
   console.log("Booking is : ", booking);
   console.log(booking.passengerDetails);
   let imageArr = [
@@ -148,8 +148,8 @@ const SingleHiredBus = ({ booking }) => {
     },
   ];
   return (
-    <div className={styles.SingleHiredBus}>
-      <div className={styles.SingleHiredBus__image}>
+    <div className={styles.SingleHiJustAlo}>
+      <div className={styles.SingleHiJustAlo__image}>
         <img
           src={imageArr[Math.floor(Math.random() * (18 - 0 + 1) + 0)].images}
           alt="bus"
@@ -157,7 +157,7 @@ const SingleHiredBus = ({ booking }) => {
       </div>
 
       <div style={{ display: "flex", justifyContent: "space-evenly" }}>
-        <div className={styles.SingleHiredBus__persondetails}>
+        <div className={styles.SingleHiJustAlo__persondetails}>
           <div
             style={{
               color: "#00CED1",
@@ -218,4 +218,4 @@ const SingleHiredBus = ({ booking }) => {
   );
 };
 
-export default SingleHiredBus;
+export default SingleHiJustAlo;

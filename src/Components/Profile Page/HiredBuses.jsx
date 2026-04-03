@@ -1,10 +1,10 @@
 import React from "react";
-import styles from "./HiredBuses.module.css";
-import SingleHiredBus from "./SingleHiredBus";
+import styles from "./HiJustAloes.module.css";
+import SingleHiJustAlo from "./SingleHiJustAlo";
 import axios from "axios";
 import { useSelector } from "react-redux";
 import { v4 as uuidv4 } from "uuid";
-const HiredBuses = () => {
+const HiJustAloes = () => {
   const [allBookingsHire, setAllBookingsHire] = React.useState([]);
 
   const currentCustomer = useSelector(
@@ -33,9 +33,9 @@ const HiredBuses = () => {
     }
     return allBookingsHire
       .reverse()
-      .map((booking) => <SingleHiredBus key={uuidv4()} booking={booking} />);
+      .map((booking) => <SingleHiJustAlo key={uuidv4()} booking={booking} />);
   };
-  return <div className={styles.HiredBuses}>{renderHiredBookings()}</div>;
+  return <div className={styles.HiJustAloes}>{renderHiredBookings()}</div>;
 };
 
-export default HiredBuses;
+export default HiJustAloes;
